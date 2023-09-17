@@ -1,5 +1,4 @@
-# chanelCosmetics
-# PPA Project Year 2 Semester 2
+# PPA Project Year 2 Semester 2 (Chanel Cosmetics)
 # Group Name: 
 - WD_10_RuntimeTerror
 # Group Members: 
