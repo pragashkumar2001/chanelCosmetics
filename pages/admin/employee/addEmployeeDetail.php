@@ -22,7 +22,7 @@
 
      <div class="page-content px-25">
 
-       <a href="employeeDetail.php" class="custom-btn m-25">Go Back</a>
+       <a href="employeeDetails.php" class="custom-btn m-25">Go Back</a>
 
        <div class="card my-25">
          <form action="employeeHandler.php" method="post" enctype="multipart/form-data" class="form-content">
@@ -43,7 +43,10 @@
              <input type="number" name="txtContact" id="txtContact" required />
            </div>
 
-
+           <div class="form-group mb-15">
+             <label for="txtSalary">Salary</label>
+             <input type="number" name="txtSalary" id="txtSalary" required />
+           </div>
 
            <div class="mb-15">
              <button type="submit" class="custom-btn" name="createEmployeeBtn" id="createEmployeeBtn">Save</button>

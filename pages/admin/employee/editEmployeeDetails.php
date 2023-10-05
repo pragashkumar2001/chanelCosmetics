@@ -42,23 +42,27 @@
            <input type="hidden" name="id" value="<?php echo $_GET["id"]; ?>">
 
            <div class="form-group mb-15">
-             <label for="lstStatus">Status</label>
-             <select name="lstStatus" id="lstStatus" required>
-               <?php
-                $sizes = array("Pending", "Cancelled", "Delivered");
-                foreach ($sizes as $value) {
-                  if ($row['status'] == $value) {
-                    echo '<option selected value="' . $value . '">' . $value . '</option>';
-                  } else {
-                    echo '<option value="' . $value . '">' . $value . '</option>';
-                  }
-                }
-                ?>
-             </select>
+             <label for="txtEmployeeName">Employee Name</label>
+             <input type="text" name="txtEmployeeName" id="txtEmployeeName" required />
+           </div>
+
+           <div class="form-group mb-15">
+             <label for="txtAddress">Address</label>
+             <textarea name="txtAddress" id="txtAddress" required></textarea>
+           </div>
+
+           <div class="form-group mb-15">
+             <label for="txtContact">Contact</label>
+             <input type="number" name="txtContact" id="txtContact" required />
+           </div>
+
+           <div class="form-group mb-15">
+             <label for="txtSalary">Salary</label>
+             <input type="number" name="txtSalary" id="txtSalary" required />
            </div>
 
            <div class="mb-15">
-             <button type="submit" class="custom-btn" name="editEmployeeBtn" id="editEmployeeBtn">Save</button>
+             <button type="submit" class="custom-btn" name="editEmployeeBtn" id="editEmployeeBtn">Update</button>
            </div>
          </form>
        </div>

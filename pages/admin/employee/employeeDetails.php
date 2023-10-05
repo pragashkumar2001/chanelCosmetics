@@ -21,7 +21,8 @@ include("../shared/head.php");
     ?>
 
     <div class="page-content px-25">
-
+    
+      <a href="addEmployeeDetail.php" class="custom-btn m-25">Add Employee</a>
       <?php
       include_once '../../../configs/database.php';
 
@@ -64,7 +65,9 @@ include("../shared/head.php");
             echo "<td>" . $row['contact'] . "</td>";
             echo "<td>" . $row['salary'] . "</td>";
             echo '<td class="text-center">
-            <a href="editEmployeeDetails.php?id=' . $row["employee_id"] . '" class="custom-btn-outline">Edit</a>
+            <a href="editEmployeeDetai.php?id=' . $row["employee_id"] . '" class="custom-btn-outline">Edit</a>
+            <span class="mx-5"></span>
+            <a href="employeeHandler.php?delete=' . $row["employee_id"] . '" class="custom-btn-outline">Delete</a>
             </td>';
             echo "</tr>";
           }
