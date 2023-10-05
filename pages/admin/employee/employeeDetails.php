@@ -2,21 +2,21 @@
 <html lang="en">
 
 <?php
-$pageTitle = "EmployeeDetails";
+$pageTitle = "employeedetail";
 include("../shared/head.php");
 ?>
 
 <body>
 
   <?php
-  $page = "EmployeeDetails";
+  $page = "employeedetail";
   include("../shared/aside.php");
   ?>
 
   <section class="page-wrapper">
 
     <?php
-    $title = "EmployeeDetails";
+    $title = "employeedetail";
     include("../shared/nav.php");
     ?>
 
@@ -26,7 +26,7 @@ include("../shared/head.php");
       include_once '../../../configs/database.php';
 
       $limit = 5;
-      $sql = "SELECT * FROM customer_order";
+      $sql = "SELECT * FROM employeedetail";
       $result = mysqli_query($conn, $sql);
       $total_rows = mysqli_num_rows($result);
       $total_pages = ceil($total_rows / $limit);
@@ -38,7 +38,7 @@ include("../shared/head.php");
       }
 
       $initial_page = ($page_number - 1) * $limit;
-      $getQuery = "SELECT * FROM customer_order o, user u WHERE o.user_id = u.user_id ORDER BY o.order_id DESC LIMIT $initial_page, $limit";
+      $getQuery = "SELECT * FROM `employeedetail` ORDER BY `employee_id` DESC LIMIT $initial_page, $limit ";
 
       echo '<table>';
       echo "<thead>";
@@ -58,12 +58,13 @@ include("../shared/head.php");
 
           while ($row = mysqli_fetch_array($result)) {
             echo "<tr>";
-            echo "<td>" . $row['order_id'] . "</td>";
-            echo "<td>" . $row['order_date'] . "</td>";
-            echo "<td>" . $row['email'] . "</td>";
-            echo "<td>" . $row['status'] . "</td>";
+            echo "<td>" . $row['employee_id'] . "</td>";
+            echo "<td>" . $row['name'] . "</td>";
+            echo "<td>" . $row['address'] . "</td>";
+            echo "<td>" . $row['contact'] . "</td>";
+            echo "<td>" . $row['salary'] . "</td>";
             echo '<td class="text-center">
-            <a href="editEmployeeDetails.php?id=' . $row["order_id"] . '" class="custom-btn-outline">Edit</a>
+            <a href="editEmployeeDetails.php?id=' . $row["employee_id"] . '" class="custom-btn-outline">Edit</a>
             </td>';
             echo "</tr>";
           }

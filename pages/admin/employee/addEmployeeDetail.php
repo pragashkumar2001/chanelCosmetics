@@ -3,88 +3,50 @@
  <html lang="en">
 
  <?php
-  $pageTitle = "Products";
+  $pageTitle = "EmployeeDetails";
   include("../shared/head.php");
   ?>
 
  <body>
    <?php
-    $page = "products";
+    $page = "EmployeeDetails";
     include("../shared/aside.php");
     ?>
 
    <section class="page-wrapper">
 
      <?php
-      $title = "Add Product";
+      $title = "Add Employee";
       include("../shared/nav.php");
       ?>
 
      <div class="page-content px-25">
 
-       <a href="products.php" class="custom-btn m-25">Go Back</a>
+       <a href="employeeDetail.php" class="custom-btn m-25">Go Back</a>
 
        <div class="card my-25">
-         <form action="productHandler.php" method="post" enctype="multipart/form-data" class="form-content">
+         <form action="employeeHandler.php" method="post" enctype="multipart/form-data" class="form-content">
            <div class="form-group mb-15">
-             <label for="txtProductName">Product Name</label>
-             <input type="text" name="txtProductName" id="txtProductName" required />
+             <label for="txtEmployeeName">Employee Name</label>
+             <input type="text" name="txtEmployeeName" id="txtEmployeeName" required />
            </div>
 
            <div class="form-group mb-15">
-             <label for="txtDescription">Description</label>
-             <textarea name="txtDescription" id="txtDescription" required></textarea>
+             <label for="txtAddress">Address</label>
+             <textarea name="txtAddress" id="txtAddress" required></textarea>
            </div>
 
-           <div class="form-group mb-15">
-             <label for="imageFile">Image</label>
-             <input type="file" name="imageFile" id="imageFile" required>
-           </div>
+
 
            <div class="form-group mb-15">
-             <label for="txtBrandId">Brand</label>
-             <select name="txtBrandId" id="txtBrandId" required>
-               <?php
-                $sql = "SELECT * FROM `brand`";
-                $result = mysqli_query($conn, $sql);
-                while ($rows = mysqli_fetch_assoc($result)) {
-                ?>
-                 <option value="<?php echo $rows['brand_id']; ?>"><?php echo $rows['name']; ?></option>
-               <?php
-                }
-                ?>
-             </select>
-           </div>
-
-           <div class="form-group mb-15">
-             <label for="txtCategoryId">Category</label>
-             <select name="txtCategoryId" id="txtCategoryId" required>
-               <?php
-                $sql = "SELECT * FROM `category`";
-                $result = mysqli_query($conn, $sql);
-                while ($rows = mysqli_fetch_assoc($result)) {
-                ?>
-                 <option value="<?php echo $rows['category_id']; ?>"><?php echo $rows['name']; ?></option>
-               <?php
-                }
-                ?>
-             </select>
-           </div>
-
-           <div class="form-group mb-15">
-             <label for="txtQuantity">Quantity</label>
-             <input type="number" name="txtQuantity" id="txtQuantity" required />
-           </div>
-
-           <div class="form-group mb-15">
-             <label for="txtUnitPrice">Unit Price</label>
-             <input type="text" name="txtUnitPrice" id="txtUnitPrice" required />
+             <label for="txtContact">Contact</label>
+             <input type="number" name="txtContact" id="txtContact" required />
            </div>
 
 
 
            <div class="mb-15">
-             <button type="submit" class="custom-btn" name="createProductBtn" id="createProductBtn">Save</button>
+             <button type="submit" class="custom-btn" name="createEmployeeBtn" id="createEmployeeBtn">Save</button>
            </div>
          </form>
        </div>
