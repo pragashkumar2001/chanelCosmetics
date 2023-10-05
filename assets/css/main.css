@@ -1,17 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
-  --primary: #088178;
-  --primary-light: #c7e9e75e;
-  --primary-hover: #49c1a2;
-  --primary-hover: #0aa197;
+  --primary: #770737;
+  --primary-light: #f6d0d6;
+  --primary-hover: #FFB6C1;         
+  --primary-hover: #AA336A;
   --backgound: #ecedef;
   --secondary: #fff;
-  --dark: #2c3e50;
+  --dark: #AA336A;
   --white: #fff;
-  --text-color: #1b2932;
+  --text-color: #673147;
   --background: #f5fbff;
   --border: #c5d7e2;
+
+--Mulberry:	#770737	;
+--MillennialPink:	#F3CFC6;
+--LightPink:	#FFB6C1;
+--DarkPink:	#AA336A	;
+--Pink:	        #FFC0CB;
+--Plum:	        #673147;	 
+--PastelRed	:#FAA0A0;	
 }
 
 /* Global Styles */
@@ -38,7 +46,7 @@ a {
 
 p {
   font-size: 16px;
-  color: #465b52;
+  color: #AA336A;
   margin: 15px 0 20px 0;
 }
 
@@ -56,7 +64,7 @@ h2 {
 
 h4 {
   font-size: 20px;
-  color: #222;
+  color: #ffffff;
 }
 
 h6 {
@@ -1548,7 +1556,7 @@ table {
   border-radius: 4px;
   border-collapse: collapse;
   margin-top: 25px;
-  box-shadow: 0 2px 8px rgba(0, 67, 115, 0.2);
+  box-shadow: 0 2px 8px rgb(103, 49, 71);
 }
 
 table thead {
