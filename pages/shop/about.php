@@ -82,11 +82,11 @@ include("./shared/head.php");
       <div class="inner-container">
         <h1>About Us</h1>
         <p class="text">
-        Fashion Hub was founded by Pragash Kumar in 2022. I was 21 years old with no fashion background or training but a lot of hustle and drive! Starting with an inventory of 10 products and packing packages on the floor of my apartment, I never imagined how far I would get but one thing was for sure we weren't going to let anything stop us!!!</p>
+        Chanel Cosmetics was founded by Mohammed Inaam in 2019. I was 20 years old with no fashion background or training but a lot of hustle and drive! Starting with an inventory of 10 products and packing packages on the floor of my apartment, I never imagined how far I would get but one thing was for sure we weren't going to let anything stop us!!!</p>
         <div class="skills">
-          <span>Fashion Hub Speciality </span>
-          <span>Trending Fashion</span>
-          <span>Trending Styles</span>
+          <span>Chanel Cosmetics Speciality </span>
+          <span>Trending Cosmetics</span>
+          <span>Trending Products</span>
         </div>
       </div>
     </div>
