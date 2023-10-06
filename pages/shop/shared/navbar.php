@@ -8,7 +8,7 @@ if (!isset($_SESSION)) {
   <label for="check" class="checkbtn">
     <i class="fas fa-bars"></i>
   </label>
-  <a href="../../index.php"> <label class="logo">CHANEL<strong style="color:#000000"> Cosmetics</strong></label></a>
+  <a href="../../index.php"> <label class="logo">Chanel<strong style="color:#000000">Cosmetics</strong></label></a>
   <ul>
     <li><a class="page-link" href="../../index.php">Home</a></li>
     <li><a class="page-link" href="../../index.php#categories">Categories</a></li>

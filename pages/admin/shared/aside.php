@@ -40,7 +40,7 @@
     <li>
       <a href="../employee/employeeDetails.php" class="<?php echo ($page == "employeeDetails" ? "active" : "") ?>">
         <i class='bx bx-group'></i>
-        <span class="links-name">Employee Details</span>
+        <span class="links-name">Employees</span>
       </a>
     </li>
     <li>
