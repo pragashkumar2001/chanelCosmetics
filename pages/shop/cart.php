@@ -51,12 +51,12 @@ if (isset($_SESSION["shopping_cart"])) {
             $quantity = $cartArray[$key]["cart_quantity"];
             $amount = $cartArray[$key]['cart_quantity'] * $cartArray[$key]['unit_price'];
             $sql .= "INSERT INTO `order_detail` (`order_id`, `product_id`, `quantity`, `amount`) VALUES ('$order_id', '$product_id', '$quantity', '$amount');";
-            $sql .= "INSERT INTO `order_detail` (`order_id`, `product_id`, `quantity`, `amount`) VALUES ('$order_id', '$product_id', '$quantity', '$amount');";
           }
 
           if (!mysqli_multi_query($conn, $sql)) {
             func_alert("Unable to place an Order: " . mysqli_error($conn));
           } else {
+            unset($_SESSION["shopping_cart"]);
             func_alert("Order Placed Successfully!!!");
           }
         }
