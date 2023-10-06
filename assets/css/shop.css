@@ -13,6 +13,7 @@ nav {
 
 label.logo {
   color: var(--primary);
+  font-family:sans-serif ;
   font-size: 35px;
   line-height: 80px;
   padding: 0 100px;
