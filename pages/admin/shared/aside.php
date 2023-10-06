@@ -38,6 +38,12 @@
       </a>
     </li>
     <li>
+      <a href="../employee/employeeDetails.php" class="<?php echo ($page == "employeeDetails" ? "active" : "") ?>">
+        <i class='bx bx-group'></i>
+        <span class="links-name">Employee Details</span>
+      </a>
+    </li>
+    <li>
       <a href="../faq/faq.php" class="<?php echo ($page == "faq" ? "active" : "") ?>">
         <i class="bx bx-message"></i>
         <span class="links-name">FAQ</span>
