@@ -15,9 +15,9 @@ include("./shared/head.php");
   include("./shared/navbar.php");
   ?>
   <section id="hero">
-    <h4>Trade-in-offer</h4>
-    <h2>Super value deals</h2>
-    <h1>On all products</h1>
+    <h4>Limited offer</h4>
+    <h2>50% Off</h2>
+    <h1>On all skincare products</h1>
     <p>Save more coupons & up to 70% off!</p>
   </section>
 

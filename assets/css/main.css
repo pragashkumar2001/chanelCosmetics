@@ -64,7 +64,7 @@ h2 {
 
 h4 {
   font-size: 20px;
-  color: #ffffff;
+  color: #000000;
 }
 
 h6 {
@@ -1374,7 +1374,7 @@ section p {
   background-color: white;
   border-radius: 4px;
   padding: 5px 15px;
-  box-shadow: 0 2px 8px rgba(0, 67, 115, 0.2);
+  box-shadow: 0 2px 8px rgb(119, 7, 55);
 }
 
 /* Icon */
@@ -1541,7 +1541,7 @@ section p {
 .form-content .form-footer {
   text-align: center;
   margin-top: 20px;
-  color: #333;
+  color: #5c2b2b;
   font-size: smaller;
 }
 

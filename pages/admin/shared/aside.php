@@ -1,7 +1,7 @@
 <aside class="sidebar">
   <div class="logo-details">
     <a href="../../../index.php"><i class='bx bx-store-alt'></i></a>
-    <a href="../../../index.php"><span class="logo-name">Chanel</span></a>
+    <a href="../../../index.php"><span class="logo-name">CHANEL</span></a>
   </div>
 
   <ul class="nav-links">
