@@ -25,9 +25,13 @@ if (isset($_POST["createEmployeeBtn"])) {
 
 if (isset($_POST["editEmployeeBtn"])) {
   $id = $_POST["id"];
-  $status = $_POST["lstStatus"];
+  $name = $_POST["txtEmployeeName"];
+  $address = $_POST["txtAddress"];
+  $contact = $_POST["txtContact"];
+  $salary = $_POST["txtSalary"];
 
-  $sql = "UPDATE `employeedetail` SET `status`='$status' WHERE `employee_id`=$id;";
+  $sql =" UPDATE `employeedetail` SET `name` = ' $name', `address` = ' $address', `contact` = '$contact', `salary` = '$salary' WHERE `employee_id` = $id;";
+
 
   if (!mysqli_query($conn, $sql)) {
     func_alert("Unable to update Employee: " . mysqli_error($conn));
