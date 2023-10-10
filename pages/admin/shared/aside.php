@@ -44,6 +44,12 @@
       </a>
     </li>
     <li>
+      <a href="../feedback/feedback.php" class="<?php echo ($page == "feedback" ? "active" : "") ?>">
+        <i class='bx bx-envelope'></i>
+        <span class="links-name">feedback</span>
+      </a>
+    </li>
+    <li>
       <a href="../faq/faq.php" class="<?php echo ($page == "faq" ? "active" : "") ?>">
         <i class="bx bx-message"></i>
         <span class="links-name">FAQ</span>
