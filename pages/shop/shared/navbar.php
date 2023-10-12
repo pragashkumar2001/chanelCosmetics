@@ -8,11 +8,11 @@ if (!isset($_SESSION)) {
   <label for="check" class="checkbtn">
     <i class="fas fa-bars"></i>
   </label>
-  <a href="../../index.php"> <label class="logo">Chanel<strong style="color:#2c3e50">Cosmetics</strong></label></a>
+  <a href="../../index.php"> <label class="logo">Chanel<strong style="color:#000000">Cosmetics</strong></label></a>
   <ul>
-    <li><a class="active page-link" href="../../index.php">Home</a></li>
+    <li><a class="page-link" href="../../index.php">Home</a></li>
     <li><a class="page-link" href="../../index.php#categories">Categories</a></li>
-    <li><a class="page-link" href="../../index.php#products">Products</a></li>
+    <li><a class="page-link" href="products.php">Products</a></li>
 
     <?php if (isset($_SESSION["user_email"]) && isset($_SESSION["role"])) {
       if ($_SESSION["role"] == 'Customer') { ?>

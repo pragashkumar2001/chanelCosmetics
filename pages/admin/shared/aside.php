@@ -1,7 +1,7 @@
 <aside class="sidebar">
   <div class="logo-details">
     <a href="../../../index.php"><i class='bx bx-store-alt'></i></a>
-    <a href="../../../index.php"><span class="logo-name">Chanel</span></a>
+    <a href="../../../index.php"><span class="logo-name">CHANEL</span></a>
   </div>
 
   <ul class="nav-links">
@@ -35,6 +35,12 @@
       <a href="../users/users.php" class="<?php echo ($page == "users" ? "active" : "") ?>">
         <i class='bx bx-group'></i>
         <span class="links-name">Users</span>
+      </a>
+    </li>
+    <li>
+      <a href="../employee/employeeDetails.php" class="<?php echo ($page == "employeeDetails" ? "active" : "") ?>">
+        <i class='bx bx-group'></i>
+        <span class="links-name">Employees</span>
       </a>
     </li>
     <li>

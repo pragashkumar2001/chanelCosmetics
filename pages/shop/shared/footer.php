@@ -2,10 +2,10 @@
   <div class="">
     <h3>Contact Details</h3>
     <address>
-      <p><b>Owner: </b> Srikanthan P.K (SA22401694)</p>
-      <p><b>Address:</b> 248/18, Sir Rathnajothy Saravana Muttu mawata, Colombo -13, Sri Lanka.</p>
-      <p><b>Phone:</b> +(94) 76 239 3603</p>
-      <p><b>Hours:</b> 08:00 - 20:00 Mon - Sat</p>
+      <p><b>Owner: </b> Mohammed Inaam</p>
+      <p><b>Address:</b> 210/4, Airtel Market, Main Street, Colombo -13, Sri Lanka.</p>
+      <p><b>Phone:</b> +(94) 77 177 7547</p>
+      <p><b>Hours:</b> 08:30 - 18:00 Mon - Sat</p>
     </address>
   </div>
   <div class="about">

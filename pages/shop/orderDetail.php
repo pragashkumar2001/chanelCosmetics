@@ -41,8 +41,6 @@ include("./shared/head.php");
           <th>Order ID</th>
           <th>Product Name</th>
           <th>Product Image</th>
-          <th>Size</th>
-          <th>Color</th>
           <th>Quantity</th>
           <th>Amount</th>
         </tr>
@@ -61,8 +59,6 @@ include("./shared/head.php");
               <td><?php echo $row['order_id'] ?></td>
               <td><?php echo $row['name'] ?></td>
               <td><img src="../../<?php echo $row['image'] ?>" height="100"></td>
-              <td><?php echo $row['size'] ?></td>
-              <td><?php echo $row['color'] ?></td>
               <td><?php echo $row['Qty'] ?></td>
               <td>Rs. <?php echo $row['amount'] ?></td>
             </tr>
