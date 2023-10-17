@@ -49,8 +49,9 @@
 
       </div>
       <div class="form-holder">
-        <input type="password" name="txtPassword" id="txtPassword" placeholder="Password" class="form-control" style="font-size: 15px;" required>
+        <input type="password" name="txtPassword" id="txtPassword" placeholder="Password" class="form-control" style="font-size: 15px;" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"required>
       </div>
+      
       <div class="form-holder">
         <input type="password" name="txtConfirmPassword" id="txtConfirmPassword" placeholder="Confirm Password" class="form-control" style="font-size: 15px;" required>
       </div>
@@ -66,7 +67,8 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script>$(function(){
+<script>
+$(function(){
 	$('.form-holder').delegate("input", "focus", function(){
 		$('.form-holder').removeClass("active");
 		$(this).parent().addClass("active");
