@@ -68,9 +68,9 @@ include("./shared/head.php");
                   $average_rating = round($row["avg_rating"], 1);
                   for ($i = 1; $i <= 5; $i++) {
                     if ($i <= $average_rating) {
-                      echo '<i class="bx bxs-star"></i>';
+                      echo '<i class="bx bxs-star"></i>';//Bold star
                     } else {
-                      echo '<i class="bx bx-star"></i>';
+                      echo '<i class="bx bx-star"></i>';//empty star
                     }
                   }
                   ?>

@@ -23,9 +23,13 @@ include("./shared/head.php");
       <?php
       if (isset($_GET["id"]) && !empty($_GET["id"])) {
         $id =  $_GET["id"];
-        $sql = "SELECT *,p.name as productName, c.name as category
-              FROM product p, brand b, category c
-              WHERE p.brand_id = b.brand_id and c.category_id = p.category_id and c.category_id=$id";
+        $sql = "SELECT p.product_id, p.name as productName, p.unit_price, p.image, b.name as brand, AVG(r.rating) AS avg_rating, c.name as category
+        FROM product p
+        JOIN brand b ON p.brand_id = b.brand_id
+        LEFT JOIN rating r ON p.product_id = r.product_id
+        JOIN category c ON p.category_id = c.category_id
+        WHERE c.category_id = $id
+        GROUP BY p.product_id, p.name, p.unit_price, p.image, b.name, c.name";
         $result = mysqli_query($conn, $sql);
       }
       if (mysqli_num_rows($result) > 0) {
@@ -38,9 +42,19 @@ include("./shared/head.php");
               <h4 class="mt-5"> <?php echo $row["productName"] ?></h4>
               <div class="row flex-between">
                 <h4 class="price mt-5">Rs. <?php echo $row["unit_price"] ?></h4>
-                <a href="./productDetail.php?id=<?php echo $row["product_id"] ?>">
-                  <i class='bx bx-message-square-add circle-icon'></i>
-                </a>
+
+                <div class="rating">
+                  <?php
+                  $average_rating = round($row["avg_rating"], 1);
+                  for ($i = 1; $i <= 5; $i++) {
+                    if ($i <= $average_rating) {
+                      echo '<i class="bx bxs-star"></i>'; // Bold star
+                    } else {
+                      echo '<i class="bx bx-star"></i>'; // Empty star
+                    }
+                  }
+                  ?>
+                </div>
               </div>
             </div>
           </a>
