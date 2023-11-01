@@ -7,27 +7,11 @@ $pageTitle = "Users";
 include("../shared/head.php");
 ?>
 
+
 <body>
-  <?php
-  $page = "users";
-  include("../shared/aside.php");
-  ?>
 
-  <section class="page-wrapper">
 
-    <?php
-    $title = "Users";
-    include("../shared/nav.php");
-    ?>
     <div class="page-content px-25">
-      <div class="row flex-between">
-        <a href="addUser.php" class="custom-btn m-25">Add Admin</a>
-        <div>
-          <button class="custom-btn-dark m-25" onclick="getUser('Customer')">Customers</button>
-          <button class="custom-btn-dark m-25" onclick="getUser('Administrator')">Administrators</button>
-        </div>
-      </div>
-
       <div id="Customer" class="role">
         <?php
         $limit = 5;
@@ -180,11 +164,11 @@ include("../shared/head.php");
       </div>
       
         <div class="center">
-                <a href="userdataprint"><button class="print-btn button ">Print Details</button></a>
-
+          <button onclick="window.print()" class="print-btn button " id="print-btn">Print Details</button>
         </div>
+      
     </div>
-  </section>
+
 
   <script>
     function getUser(role) {
