@@ -43,22 +43,22 @@
 
            <div class="form-group mb-15">
              <label for="txtEmployeeName">Employee Name</label>
-             <input type="text" name="txtEmployeeName" id="txtEmployeeName" required />
+             <input type="text" name="txtEmployeeName" id="txtEmployeeName" value="<?php echo $row["name"]; ?>" required />
            </div>
 
            <div class="form-group mb-15">
              <label for="txtAddress">Address</label>
-             <textarea name="txtAddress" id="txtAddress" required></textarea>
+             <textarea name="txtAddress" id="txtAddress" required><?php echo $row["address"]; ?></textarea>
            </div>
 
            <div class="form-group mb-15">
              <label for="txtContact">Contact</label>
-             <input type="number" name="txtContact" id="txtContact" required />
+             <input type="number" name="txtContact" id="txtContact" value="<?php echo $row["contact"]; ?>"  required />
            </div>
 
            <div class="form-group mb-15">
              <label for="txtSalary">Salary</label>
-             <input type="number" name="txtSalary" id="txtSalary" required />
+             <input type="number" name="txtSalary" id="txtSalary" value="<?php echo $row["salary"]; ?>"  required />
            </div>
 
            <div class="mb-15">
