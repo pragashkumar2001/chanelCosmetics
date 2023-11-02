@@ -89,6 +89,7 @@ include("./shared/head.php");
                 <td>Rs. <?php echo $row['Total'] ?></td>
                 <td class="text-center">
                   <a href="orderDetail.php?order_id=<?php echo $row['order_id'] ?>" class="custom-btn-outline">View</a>
+                  <a href="orderPrint.php?order_id=<?php echo $row['order_id'] ?>" class="custom-btn-outline">Print Order</a>
                 </td>
               </tr>
 
