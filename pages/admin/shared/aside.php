@@ -39,7 +39,7 @@
     </li>
     <li>
       <a href="../employee/employeeDetails.php" class="<?php echo ($page == "employeeDetails" ? "active" : "") ?>">
-        <i class='bx bx-group'></i>
+        <i class='bx bxs-user-detail'></i>
         <span class="links-name">Employees</span>
       </a>
     </li>

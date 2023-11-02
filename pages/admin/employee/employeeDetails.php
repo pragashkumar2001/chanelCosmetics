@@ -2,21 +2,21 @@
 <html lang="en">
 
 <?php
-$pageTitle = "employeedetail";
+$pageTitle = "Employee Details";
 include("../shared/head.php");
 ?>
 
 <body>
 
   <?php
-  $page = "employeedetail";
+  $page = "Employee Details";
   include("../shared/aside.php");
   ?>
 
   <section class="page-wrapper">
 
     <?php
-    $title = "employeedetail";
+    $title = "Employee Details";
     include("../shared/nav.php");
     ?>
 
