@@ -180,7 +180,7 @@ include("../shared/head.php");
       </div>
       
         <div class="center">
-                <a href="userdataprint"><button class="print-btn button ">Print Details</button></a>
+                <a href="UserPrint.php"><button class="print-btn button ">Print Details</button></a>
 
         </div>
     </div>

@@ -45,7 +45,7 @@
         <input type="text" name="txtAddress" id="txtAddress" placeholder="Address" class="form-control" required>
       </div>
       <div class="form-holder">
-        <input type="tell" name="txtPhoneNumber" id="txtPhoneNumber" placeholder="07x xxx xxxx" title="07xxxxxxxx"  pattern="[0-9]{10}"class="form-control" required>
+        <input type="tell" name="txtPhoneNumber" id="txtPhoneNumber" placeholder="07x xxx xxxx" title="07xxxxxxxx"  pattern="[0-9]{3}[0-9]{3}[0-9]{3}"class="form-control" required>
 
       </div>
       <div class="form-holder">
