@@ -10,24 +10,16 @@ include("../shared/head.php");
 
 <body>
 
+  
+
 
     <div class="page-content px-25">
-      <div id="Customer" class="role">
-        <?php
-        $limit = 5;
-        $sql = "SELECT * FROM user";
-        $result = mysqli_query($conn, $sql);
-        $total_rows = mysqli_num_rows($result);
-        $total_pages = ceil($total_rows / $limit);
 
-        if (!isset($_GET['page'])) {
-          $page_number = 1;
-        } else {
-          $page_number = $_GET['page'];
-        }
-
-        $initial_page = ($page_number - 1) * $limit;
-        $getQuery = "SELECT * FROM `user` WHERE `role` = 'Customer' ORDER BY `user_id` DESC LIMIT $initial_page, $limit ";
+      <?php
+      include_once '../../../configs/database.php';
+      
+      $sql = "SELECT * FROM `user` WHERE `role` = 'Customer' ORDER BY `user_id`";
+      $result = mysqli_query($conn, $sql);
 
         echo '<table>';
         echo "<thead>";
@@ -42,10 +34,10 @@ include("../shared/head.php");
         echo "</thead>";
         echo "<tbody>";
 
-        if ($result = mysqli_query($conn, $getQuery)) {
-          if (mysqli_num_rows($result) > 0) {
+      if ($result = mysqli_query($conn, $sql)) {
+        if (mysqli_num_rows($result) > 0) {
 
-            while ($row = mysqli_fetch_array($result)) {
+          while ($row = mysqli_fetch_array($result)) {
               echo "<tr>";
               echo "<td>" . $row['user_id'] . "</td>";
               echo "<td>" . $row['first_name'] . "</td>";
@@ -54,136 +46,34 @@ include("../shared/head.php");
               echo "<td>" . $row['address'] . "</td>";
               echo "<td>" . $row['phone_no'] . "</td>";
               echo "</tr>";
-            }
-
-            if ($total_pages > 1) {
-              echo '<tr class="table-row">';
-              echo '<td class="table-account pagination" colspan="3">';
-              for ($page_number = 1; $page_number <= $total_pages; $page_number++) {
-                echo '<a href = "users.php?page=' . $page_number . '">' . $page_number . ' </a>';
-              }
-              echo ' </td>';
-              echo '</tr>';
-            }
-
-            mysqli_free_result($result);
-          } else {
-            echo "<tr>";
-            echo "<td><em>No records were found.</em></td>";
-            echo "</tr>";
           }
+          mysqli_free_result($result);
         } else {
           echo "<tr>";
-          echo "<td><em>Oops! Something went wrong. Please try again later.</em></td>";
+          echo "<td><em>No records were found.</em></td>";
           echo "</tr>";
         }
-
-        echo "<tbody>";
-        echo "</tbody>";
-        echo "</table>";
-
-        ?>
-      </div>
-
-      <div id="Administrator" class="role" style="display:none">
-        <?php
-        $limit = 5;
-        $sql = "SELECT * FROM user";
-        $result = mysqli_query($conn, $sql);
-        $total_rows = mysqli_num_rows($result);
-        $total_pages = ceil($total_rows / $limit);
-
-        if (!isset($_GET['page'])) {
-          $page_number = 1;
-        } else {
-          $page_number = $_GET['page'];
-        }
-
-        $initial_page = ($page_number - 1) * $limit;
-        $getQuery = "SELECT * FROM `user` WHERE `role` = 'Administrator' ORDER BY `user_id` DESC LIMIT $initial_page, $limit ";
-
-        echo '<table>';
-        echo "<thead>";
+      } else {
         echo "<tr>";
-        echo "<th>Admin ID</th>";
-        echo "<th>First Name</th>";
-        echo "<th>Last Name</th>";
-        echo "<th>Email</th>";
-        echo "<th>Address</th>";
-        echo "<th>Phone No</th>";
-        echo '<th class="text-center">Action</th>';
+        echo "<td><em>Oops! Something went wrong. Please try again later.</em></td>";
         echo "</tr>";
-        echo "</thead>";
-        echo "<tbody>";
+      }
 
-        if ($result = mysqli_query($conn, $getQuery)) {
-          if (mysqli_num_rows($result) > 0) {
-
-            while ($row = mysqli_fetch_array($result)) {
-              echo "<tr>";
-              echo "<td>" . $row['user_id'] . "</td>";
-              echo "<td>" . $row['first_name'] . "</td>";
-              echo "<td>" . $row['last_name'] . "</td>";
-              echo "<td>" . $row['email'] . "</td>";
-              echo "<td>" . $row['address'] . "</td>";
-              echo "<td>" . $row['phone_no'] . "</td>";
-              echo '<td class="text-center">
-                    <a href="editUser.php?id=' . $row["user_id"] . '" class="custom-btn-outline">Edit</a>
-                    <span class="mx-5"></span>
-                    <a href="userHandler.php?delete=' . $row["user_id"] . '" class="custom-btn-outline">Delete</a>
-                    </td>';
-              echo "</tr>";
-            }
-
-            if ($total_pages > 1) {
-              echo '<tr class="table-row">';
-              echo '<td class="table-account pagination" colspan="3">';
-              for ($page_number = 1; $page_number <= $total_pages; $page_number++) {
-                echo '<a href = "users.php?page=' . $page_number . '">' . $page_number . ' </a>';
-              }
-              echo ' </td>';
-              echo '</tr>';
-            }
-
-            mysqli_free_result($result);
-          } else {
-            echo "<tr>";
-            echo "<td><em>No records were found.</em></td>";
-            echo "</tr>";
-          }
-        } else {
-          echo "<tr>";
-          echo "<td><em>Oops! Something went wrong. Please try again later.</em></td>";
-          echo "</tr>";
-        }
-
-        echo "<tbody>";
-        echo "</tbody>";
-        echo "</table>";
-        ?>
-      </div>
+      echo "<tbody>";
+      echo "</tbody>";
+      echo "</table>";
+      ?>
       
-        <div class="center">
+	<div class="center">
           <button onclick="window.print()" class="print-btn button " id="print-btn">Print Details</button>
         </div>
-      
+
+	<?php
+      mysqli_close($conn);
+      ?>
     </div>
+ 
 
-
-  <script>
-    function getUser(role) {
-      var i;
-      var x = document.getElementsByClassName("role");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      document.getElementById(role).style.display = "block";
-    }
-  </script>
-
-  <?php
-  mysqli_close($conn);
-  ?>
 </body>
 
 </html>
