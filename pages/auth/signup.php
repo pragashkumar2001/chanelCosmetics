@@ -45,11 +45,14 @@
         <input type="text" name="txtAddress" id="txtAddress" placeholder="Address" class="form-control" required>
       </div>
       <div class="form-holder">
-        <input type="number" name="txtPhoneNumber" id="txtPhoneNumber" placeholder="07x xxx xxxx" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <input type="number" name="txtPhoneNumber" id="txtPhoneNumber" placeholder="07x xxx xxxx" class="form-control" required>
 
       </div>
       <div class="form-holder">
-        <input type="password" name="txtPassword" id="txtPassword" placeholder="Password" class="form-control" style="font-size: 15px;" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+        <input type="password" name="txtPassword" id="txtPassword" placeholder="Password" class="form-control"
+         style="font-size: 15px;" 
+         title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"required>
       </div>
       
       <div class="form-holder">
