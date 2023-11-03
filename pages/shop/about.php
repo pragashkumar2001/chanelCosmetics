@@ -10,6 +10,10 @@ include("./shared/head.php");
 ?>
 
 <body>
+
+<?php
+  include("./shared/navbar.php");
+  ?>
   <style>
     .about-section {
       background: url(../../assets/images/about.jpg) no-repeat left;
@@ -71,6 +75,157 @@ include("./shared/head.php");
         padding: 60px;
       }
     }
+
+   
+  
+.contact-info-area {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.about-section .container{
+  width: 100%;
+}
+.contact-form {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 100px 350px  ;
+    -webkit-box-shadow: 0px 3px 8px 2px #ededed; 
+    box-shadow: 0px 3px 8px 2px #ededed;
+    z-index: 3;
+    widows: 100%;
+}
+.contact-form .sec-title-style1{
+    position: relative;
+    display: block;
+    padding-bottom: 51px;
+    width: 50%;
+}
+.contact-form .text-box{
+    position: relative;
+    display: block;
+    margin-top: 19px;
+    width: 50%;    
+}
+.contact-form .text p{
+    color: #848484;
+    line-height: 26px;
+    margin: 0;
+}
+
+.contact-form .inner-box{
+    position: relative;
+    display: block;
+    background: #ffffff;
+}
+.contact-form form{
+    position: relative;
+    display: block;
+}
+.contact-form form .input-box{
+    position: relative;
+    display: block;
+    padding: 1rem;
+}
+
+.contact-form form input[type="text"],
+.contact-form form input[type="email"],
+.contact-form form textarea{
+    position: relative;
+    display: block;   
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    padding-left: 19px;
+    padding-right: 15px;
+    border-radius: 0px;
+    margin-bottom: 20px;
+    transition: all 500ms ease;
+}
+.contact-form form textarea {
+  position: relative;
+    display: block;   
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    width: 150%;
+    height: 162.5px;
+    padding-top:10px;
+    font-size: 16px;
+    padding-left: 19px;
+    padding-right: 15px;
+    border-radius: 0px;
+    margin-bottom: 20px;
+    transition: all 500ms ease;
+    
+}
+.contact-form form input[type="text"]:focus{
+    color: #222222;
+    border-color: #d4d4d4; 
+}
+.contact-form form input[type="email"]:focus{
+    color: #222222;
+    border-color: #d4d4d4;
+}
+.contact-form form textarea:focus{
+    color: #222222;
+    border-color: #d4d4d4;
+}
+.contact-form form input[type="text"]::-webkit-input-placeholder {
+    color: #848484;
+}
+.contact-form form input[type="text"]:-moz-placeholder {
+    color: #848484;
+}
+.contact-form form input[type="text"]::-moz-placeholder {
+    color: #848484;
+}
+.contact-form form input[type="text"]:-ms-input-placeholder {
+    color: #848484;
+}
+.contact-form form input[type="email"]::-webkit-input-placeholder {
+    color: #848484;
+}
+.contact-form form input[type="email"]:-moz-placeholder {
+    color: #848484;
+}
+.contact-form form input[type="email"]::-moz-placeholder {
+    color: #848484;
+}
+.contact-form form input[type="email"]:-ms-input-placeholder {
+    color: #848484;
+}
+.contact-form .input-sub{
+  width: 150%;
+}
+.contact-form form button {
+    position: relative;
+    display: block;
+    width: 140%;
+    background: #FFA500;
+    border: 1px solid #FFA500;
+    color: #131313;
+    font-size: 16px;
+    line-height: 55px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    cursor: pointer;
+    
+}
+
+.contact-form form button:hover{
+    color: #ffffff;
+    background: #131313;
+}
+
+//feedback css here
+
+
   </style>
 
 
@@ -91,7 +246,54 @@ include("./shared/head.php");
       </div>
     </div>
 
+  
+                <div class="contact-form">
+                       
+                    <div class="inner-box">
+                        <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php" method="post">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-12">
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="input-box">   
+                                                <input type="text" name="form_name" value="" placeholder="Name" required="">
+                                            </div> 
+                                             <div class="input-box"> 
+                                                <input type="text" name="form_phone" value="" placeholder="Phone">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="input-box"> 
+                                                <input type="email" name="form_email" value="" placeholder="Email" required="">
+                                            </div>
+                                            <div class="input-box"> 
+                                                <input type="text" name="form_website" value="" placeholder="Website">
+                                            </div> 
+                                        </div>  
+                                    </div> 
+                                    <div class="row">
+                                         <div class="input-sub">
+                                            <div class="input-box"> 
+                                                <input type="text" name="form_subject" value=""  placeholder="Subject">
+                                            </div>     
+                                        </div> 
+                                    </div>   
+                                </div>
+                                <div class="col-xl-6 col-lg-12">
+                                    <div class="input-box">    
+                                        <textarea name="form_message" placeholder="Your Message..." required=""></textarea>
+                                    </div>
+                                    <div class="button-box ms-20">
+                                        <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                                        <button type="submit" data-loading-text="Please wait...">Send Message<span class="flaticon-next"></span></button>    
+                                    </div>         
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
   </section>
+
+  //feedback form here
 
   <?php include_once './shared/footer.php'; ?>
 
