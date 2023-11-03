@@ -53,12 +53,6 @@ if (file_exists($productImagePath)) {
     // Image file not found
     $pdf->Cell(0, 10, '', 0, 1, 'C');
 }
-
-
-    // // Add product image
-    // $productImage = '../../assets/uploads' . $row['image']; 
-    // $pdf->Image($productImage, 70, $pdf->GetY(), 70); // Adjust the X and Y coordinates and width as needed
-    // $pdf->Ln(60);
     
     // Add product name
     $pdf->Cell(0, 10, $row['pname'], 0, 1, 'C');
