@@ -78,8 +78,7 @@ include("./shared/head.php");
 
       <div class="column">
         <div class=" ms-50">
-          <img src="../../<?php echo $row["image"] ?>" height="500px" />
-          <a href="productPrint.php?product_id=<?php echo $row['product_id'] ?>" class="custom-btn-outline">Print Order</a>
+          <img src="../../<?php echo $row["image"] ?>" height="500px" /> 
         </div>
       </div>
 
@@ -107,8 +106,9 @@ include("./shared/head.php");
               <input type="number" name="cart_quantity" min="1" max="<?php echo $row['quantity'] ?>" value="1">
             </p>
 
-
+            <a href="productPrint.php?product_id=<?php echo $row['product_id'] ?>" class="custom-btn-outline">Print Product Details</a>
             <button type="submit" class="custom-btn" name="addToCart" id="addToCart">Add to Cart</button>
+            
           </form>
 
         </div>
