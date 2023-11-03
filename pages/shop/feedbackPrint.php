@@ -12,7 +12,7 @@ $pdf->AddPage();
 $pdf->SetFont('Arial', 'B', 16);
 
 // Title
-$pdf->Cell(0, 10, 'Feedback Report', 0, 1, 'C');
+$pdf->Cell(0, 10, 'Feedback Response', 0, 1, 'C');
 $pdf->Ln(10);
 
 if (mysqli_num_rows($result_feedback) > 0) {
@@ -39,7 +39,7 @@ if (mysqli_num_rows($result_feedback) > 0) {
 }
 
 // Output the PDF to the browser
-$pdf->Output('feedback_report.pdf', 'D');
+$pdf->Output('feedback_response.pdf', 'D');
 }
 
 ?>
