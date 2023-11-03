@@ -22,7 +22,7 @@ if ($row = mysqli_fetch_assoc($result)) {
     $pdf->SetFont('Arial', 'B', 16);
 
 // Ensure that the path to the image file is correct
-$productImageFileName = $row['image']; // Assuming $row['image'] contains the image filename
+$productImageFileName = $row['image']; 
 $uploadDirectory = '../../assets/uploads/';
 
 // Construct the full path to the image file

@@ -17,8 +17,9 @@ include("./shared/head.php");
   <section id="hero">
     <h4>Limited offer</h4>
     <h2>50% Off</h2>
-    <h1>On all skincare products</h1>
-    <p>Save more coupons & up to 70% off!</p>
+    <br>
+    <h1>On All Face Washes</h1>
+    <!-- <p>Save more coupons & up to 70% off!</p> -->
   </section>
 
   <div id="categories" class="mb-40"></div>
