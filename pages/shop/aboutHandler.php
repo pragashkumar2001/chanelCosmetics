@@ -23,7 +23,7 @@ function func_alert($message)
       $sql = "INSERT INTO `feedback` (`name` , `email` , `phoneNo` , `category` , `subject` , `description`) VALUES ('$name', '$email', '$phoneNo', '$category', '$subject', '$description');";
       
       if (!mysqli_query($conn, $sql)) {
-        func_alert("Unable to insert a new faq: " . mysqli_error($conn));
+        func_alert("Unable to send a new feedback: " . mysqli_error($conn));
       } else {
         generatePDF($conn);
         func_alert("Feedback Received Successfully!!!");

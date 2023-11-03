@@ -19,8 +19,8 @@ if (mysqli_num_rows($result_feedback) > 0) {
     // Table Headers
     $pdf->SetFont('Arial', 'B', 12);
     $pdf->Cell(40, 10, 'Email', 1);
-    $pdf->Cell(35, 10, 'Category', 1);
-    $pdf->Cell(35, 10, 'Subject', 1);
+    $pdf->Cell(30, 10, 'Category', 1);
+    $pdf->Cell(40, 10, 'Subject', 1);
     $pdf->Cell(85, 10, 'Description', 1);
     $pdf->Ln();
 
@@ -28,8 +28,8 @@ if (mysqli_num_rows($result_feedback) > 0) {
     // Display data in the PDF
     while ($row = mysqli_fetch_array($result_feedback)) {
         $pdf->Cell(40, 10, $row['email'], 1);
-        $pdf->Cell(35, 10, $row['category'], 1);
-        $pdf->Cell(35, 10, $row['subject'], 1);
+        $pdf->Cell(30, 10, $row['category'], 1);
+        $pdf->Cell(40, 10, $row['subject'], 1);
         $pdf->MultiCell(85, 10, $row['description'], 1);
     }
 
