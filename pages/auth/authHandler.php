@@ -47,14 +47,12 @@ if (isset($_POST["signUpBtn"])) {
 	$lastName = $_POST["txtLastName"];
 	$email = $_POST["txtEmail"];
 	$password = $_POST["txtPassword"];
-	$cPassword = $_POST["txtConfirmPassword"];
 	$address = $_POST["txtAddress"];
 	$phoneNo = $_POST["txtPhoneNumber"];
 	$role = "Customer";
 
 
-	$sql = "INSERT INTO `user`(`first_name`, `last_name`, `email`, `password`, `address`, `phone_no`, `role`) 
-					VALUES ('$firstName','$lastName','$email','$password','$address','$phoneNo','$role');";
+	$sql = "INSERT INTO `user`(`first_name`, `last_name`, `email`, `password`, `address`, `phone_no`, `role`) VALUES ('$firstName','$lastName','$email','$password','$address','$phoneNo','$role');";
 
 	if (!mysqli_query($conn, $sql)) {
 		func_alert_signup("Unable to register!!!");

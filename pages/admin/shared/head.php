@@ -6,4 +6,5 @@
   <link rel="stylesheet" href="../../../assets/css/main.css?v=<?php echo time(); ?>" />
   <link rel="stylesheet" href="../../../assets/css/admin.css?v=<?php echo time(); ?>" />
   <link href=" https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="print.css" media="print">
 </head>
