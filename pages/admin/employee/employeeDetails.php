@@ -23,6 +23,9 @@ include("../shared/head.php");
     <div class="page-content px-25">
     
       <a href="addEmployeeDetail.php" class="custom-btn m-25">Add Employee</a>
+
+      <a href="employeePrint.php" class="custom-btn m-25">Print Employee Details</a>
+
       <?php
       include_once '../../../configs/database.php';
 

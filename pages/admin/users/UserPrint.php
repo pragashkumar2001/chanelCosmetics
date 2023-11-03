@@ -35,7 +35,7 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_array($result)) {
         $pdf->Cell(30, 10, $row['user_id'], 1);
         $pdf->Cell(30, 10, $row['first_name'], 1);
-        $pdf->Cell(30, 10, $row['first_name'], 1);
+        $pdf->Cell(30, 10, $row['last_name'], 1);
         $pdf->Cell(50, 10, $row['email'], 1);
         $pdf->Cell(25, 10, $row['address'], 1);
         $pdf->Cell(30, 10, $row['phone_no'], 1);
