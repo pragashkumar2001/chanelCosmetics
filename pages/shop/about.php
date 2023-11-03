@@ -244,7 +244,7 @@ include("./shared/head.php");
       </div>
     </div>
 
-    <h2 style="text-align: center; margin-top: 50px;">Provide Your Feedback here</h2>
+    <h2 style="text-align: center; margin-top: 50px;">Provide Your Feedback here!</h2>
   
     <div class="contact-form">
       <div class="inner-box">
