@@ -39,13 +39,13 @@
         <input type="text" id="txtLastName" name="txtLastName" placeholder="Last Name" class="form-control" required>
       </div>
       <div class="form-holder">
-        <input type="text" name="txtEmail" id="txtEmail" placeholder="e-mail" class="form-control" required>
+        <input type="email" name="txtEmail" id="txtEmail" placeholder="e-mail" class="form-control" required>
       </div>
       <div class="form-holder">
         <input type="text" name="txtAddress" id="txtAddress" placeholder="Address" class="form-control" required>
       </div>
       <div class="form-holder">
-        <input type="tell" name="txtPhoneNumber" id="txtPhoneNumber" placeholder="07x xxx xxxx" title="07xxxxxxxx"  pattern="[0-9]{3}[0-9]{3}[0-9]{3}"class="form-control" required>
+        <input type="number" name="txtPhoneNumber" id="txtPhoneNumber" placeholder="07x xxx xxxx" title="07xxxxxxxx"  pattern="[0-9]{3}[0-9]{3}[0-9]{3}"class="form-control" required>
 
       </div>
       <div class="form-holder">

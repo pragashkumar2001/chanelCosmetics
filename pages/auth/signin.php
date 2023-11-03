@@ -22,7 +22,7 @@
 					<h3>Sign in</h3>
 				
 					<div class="form-holder active">
-						<input type="text" placeholder="e-mail" class="form-control" name="txtEmail" id="txtEmail" required>
+						<input type="email" placeholder="e-mail" class="form-control" name="txtEmail" id="txtEmail" required>
 					</div>
                     <div class="form-holder">
 						<input type="password" placeholder="password" class="form-control" style="font-size: 15px;" name="txtPassword" id="txtPassword" required>

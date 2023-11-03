@@ -68,7 +68,7 @@
 
            <div class="form-group mb-15">
              <label for="txtPhoneNo">Phone No</label>
-             <input type="text" name="txtPhoneNo" id="txtPhoneNo" value="<?php echo $row["phone_no"]; ?>" required />
+             <input type="number" name="txtPhoneNo" id="txtPhoneNo" value="<?php echo $row["phone_no"]; ?>" required />
            </div>
 
            <div class="mb-15">
