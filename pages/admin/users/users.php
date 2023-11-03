@@ -22,6 +22,7 @@ include("../shared/head.php");
     <div class="page-content px-25">
       <div class="row flex-between">
         <a href="addUser.php" class="custom-btn m-25">Add Admin</a>
+        <a href="UserPrint.php" class="custom-btn m-25">Print Details</a>
         <div>
           <button class="custom-btn-dark m-25" onclick="getUser('Customer')">Customers</button>
           <button class="custom-btn-dark m-25" onclick="getUser('Administrator')">Administrators</button>
@@ -178,11 +179,6 @@ include("../shared/head.php");
         echo "</table>";
         ?>
       </div>
-      
-        <div class="center">
-                <a href="UserPrint.php"><button class="print-btn button ">Print Details</button></a>
-
-        </div>
     </div>
   </section>
 
