@@ -30,6 +30,7 @@ if (isset($_POST["editEmployeeBtn"])) {
   $contact = $_POST["txtContact"];
   $salary = $_POST["txtSalary"];
 
+  //update crud operation
   $sql =" UPDATE `employeedetail` SET `name` = ' $name', `address` = ' $address', `contact` = '$contact', `salary` = '$salary' WHERE `employee_id` = $id;";
 
 
@@ -39,7 +40,7 @@ if (isset($_POST["editEmployeeBtn"])) {
     func_alert("Employee Updated Successfully!!!");
   }
 }
-
+//Delete crud operation
 if (isset($_GET['delete'])) {
   $id = $_GET['delete'];
   
