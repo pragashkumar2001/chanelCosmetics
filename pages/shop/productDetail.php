@@ -7,7 +7,9 @@ include_once '../../configs/database.php';
 
 if (isset($_GET["id"]) && !empty($_GET["id"])) {
   $id =  $_GET["id"];
-  $sql = "SELECT p.*, b.name as brandName , c.name as categoryName FROM product p, brand b, category c WHERE p.product_id=$id AND p.brand_id = b.brand_id AND p.category_id = c.category_id ";
+  $sql = "SELECT p.*, b.name as brandName , c.name as categoryName 
+  FROM product p, brand b, category c 
+  WHERE p.product_id=$id AND p.brand_id = b.brand_id AND p.category_id = c.category_id ";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_assoc($result);
 }
@@ -77,6 +79,7 @@ include("./shared/head.php");
       <div class="column">
         <div class=" ms-50">
           <img src="../../<?php echo $row["image"] ?>" height="500px" />
+          <a href="productPrint.php?product_id=<?php echo $row['product_id'] ?>" class="custom-btn-outline">Print Order</a>
         </div>
       </div>
 
