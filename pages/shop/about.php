@@ -131,6 +131,7 @@ include("./shared/head.php");
 
 .contact-form form input[type="text"],
 .contact-form form input[type="email"],
+.contact-form form input[type="number"],
 .contact-form form select,
 .contact-form form textarea{
     position: relative;
@@ -257,7 +258,7 @@ include("./shared/head.php");
                                   <input type="text" name="txtName" value="" placeholder="Name" required="">
                               </div> 
                                 <div class="input-box"> 
-                                  <input type="text" name="txtPhoneNo" value="" placeholder="Phone">
+                                  <input type="number" name="txtPhoneNo" value="" placeholder="Phone">
                               </div>
                           </div>
                           <div class="col-xl-6">

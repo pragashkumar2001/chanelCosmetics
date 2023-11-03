@@ -78,7 +78,7 @@
 
            <div class="form-group mb-15">
              <label for="txtUnitPrice">Unit Price</label>
-             <input type="text" name="txtUnitPrice" id="txtUnitPrice" required />
+             <input type="number" name="txtUnitPrice" id="txtUnitPrice" required />
            </div>
 
 
