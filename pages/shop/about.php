@@ -131,6 +131,7 @@ include("./shared/head.php");
 
 .contact-form form input[type="text"],
 .contact-form form input[type="email"],
+.contact-form form select,
 .contact-form form textarea{
     position: relative;
     display: block;   
@@ -223,10 +224,7 @@ include("./shared/head.php");
     background: #131313;
 }
 
-//feedback css here
-
-
-  </style>
+</style>
 
 
   <?php
@@ -246,55 +244,60 @@ include("./shared/head.php");
       </div>
     </div>
 
+    <h2 style="text-align: center; margin-top: 50px;">Provide Your Feedback here!</h2>
   
-                <div class="contact-form">
-                       
-                    <div class="inner-box">
-                        <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php" method="post">
-                            <div class="row">
-                                <div class="col-xl-6 col-lg-12">
-                                    <div class="row">
-                                        <div class="col-xl-6">
-                                            <div class="input-box">   
-                                                <input type="text" name="form_name" value="" placeholder="Name" required="">
-                                            </div> 
-                                             <div class="input-box"> 
-                                                <input type="text" name="form_phone" value="" placeholder="Phone">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6">
-                                            <div class="input-box"> 
-                                                <input type="email" name="form_email" value="" placeholder="Email" required="">
-                                            </div>
-                                            <div class="input-box"> 
-                                                <input type="text" name="form_website" value="" placeholder="Website">
-                                            </div> 
-                                        </div>  
-                                    </div> 
-                                    <div class="row">
-                                         <div class="input-sub">
-                                            <div class="input-box"> 
-                                                <input type="text" name="form_subject" value=""  placeholder="Subject">
-                                            </div>     
-                                        </div> 
-                                    </div>   
-                                </div>
-                                <div class="col-xl-6 col-lg-12">
-                                    <div class="input-box">    
-                                        <textarea name="form_message" placeholder="Your Message..." required=""></textarea>
-                                    </div>
-                                    <div class="button-box ms-20">
-                                        <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
-                                        <button type="submit" data-loading-text="Please wait...">Send Message<span class="flaticon-next"></span></button>    
-                                    </div>         
-                                </div> 
-                            </div>
-                        </form>
-                    </div>
+    <div class="contact-form">
+      <div class="inner-box">
+          <form id="contact-form" name="contact_form" class="default-form" action="aboutHandler.php" method="post">
+              <div class="row">
+                  <div class="col-xl-6 col-lg-12">
+                      <div class="row">
+                          <div class="col-xl-6">
+                              <div class="input-box">   
+                                  <input type="text" name="txtName" value="" placeholder="Name" required="">
+                              </div> 
+                                <div class="input-box"> 
+                                  <input type="text" name="txtPhoneNo" value="" placeholder="Phone">
+                              </div>
+                          </div>
+                          <div class="col-xl-6">
+                              <div class="input-box"> 
+                                  <input type="email" name="txtEmail" value="" placeholder="Email" required="">
+                              </div>
+                              <div class="input-box">
+                                  <select name="txtCategory" required="">
+                                      <option value="" selected disabled>Feedback Type</option>
+                                      <option value="General">General Inquiry</option>
+                                      <option value="Suggestion">Suggestion</option>
+                                      <option value="Complaint">Complaint</option>
+                                      <option value="Other">Other</option>
+                                  </select>
+                              </div> 
+                          </div>  
+                      </div> 
+                      <div class="row">
+                            <div class="input-sub">
+                              <div class="input-box"> 
+                                  <input type="text" name="txtSubject" value=""  placeholder="Subject">
+                              </div>     
+                          </div> 
+                      </div>   
+                  </div>
+                  <div class="col-xl-6 col-lg-12">
+                      <div class="input-box">    
+                          <textarea name="txtDescription" placeholder="Your Message..." required=""></textarea>
+                      </div>
+                      <div class="button-box ms-20">
+                          <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                          <button type="submit" name="createFeedback" id="createFeedback">Send Message<span class="flaticon-next"></span></button>    
+                      </div>         
+                  </div> 
+              </div>
+          </form>
+      </div>
+  </div>
   </section>
-
-  //feedback form here
-
+  
   <?php include_once './shared/footer.php'; ?>
 
 </body>
