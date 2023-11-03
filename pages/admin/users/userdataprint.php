@@ -10,9 +10,6 @@ include("../shared/head.php");
 
 <body>
 
-  
-
-
     <div class="page-content px-25">
 
       <?php

@@ -248,7 +248,7 @@ include("./shared/head.php");
   
     <div class="contact-form">
       <div class="inner-box">
-          <form id="contact-form" name="contact_form" class="default-form" action="about.php" method="post">
+          <form id="contact-form" name="contact_form" class="default-form" action="aboutHandler.php" method="post">
               <div class="row">
                   <div class="col-xl-6 col-lg-12">
                       <div class="row">
@@ -297,37 +297,7 @@ include("./shared/head.php");
       </div>
   </div>
   </section>
-
-  <?php
-    include_once '../../configs/database.php';
-
-    function func_alert($message)
-    {
-      echo '<script language="javascript">';
-      echo 'alert("' . $message . '");';
-      echo 'location.href="about.php"';
-      echo '</script>';
-    }
-
-    if (isset($_POST["createFeedback"])) {
-      $name = $_POST["txtName"];
-      $email = $_POST["txtEmail"];
-      $phoneNo = $_POST["txtPhoneNo"];
-      $category = $_POST["txtCategory"];
-      $subject = $_POST["txtSubject"];
-      $description = $_POST["txtDescription"];
-      
-      $sql = "INSERT INTO `feedback` (`name` , `email` , `phoneNo` , `category` , `subject` , `description`) VALUES ('$name', '$email', '$phoneNo', '$category', '$subject', '$description');";
-      
-      if (!mysqli_query($conn, $sql)) {
-        func_alert("Unable to insert a new faq: " . mysqli_error($conn));
-      } else {
-        func_alert("Feedback Received Successfully!!!");
-      }
-    }
-  ?>
-
-
+  
   <?php include_once './shared/footer.php'; ?>
 
 </body>
