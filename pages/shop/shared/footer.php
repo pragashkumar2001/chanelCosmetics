@@ -16,9 +16,10 @@
     <a href="faq.php">FAQ</a>
   </div>
   <?php
-  if (!isset($_SESSION)) {
-    session_start();
-  }
+
+if (!isset($_SESSION)) {
+  session_start();
+}
 
   if (isset($_SESSION["user_id"])) {
   ?>
