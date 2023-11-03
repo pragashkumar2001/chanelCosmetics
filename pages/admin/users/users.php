@@ -178,6 +178,11 @@ include("../shared/head.php");
         echo "</table>";
         ?>
       </div>
+      
+        <div class="center">
+                <a href="UserPrint.php"><button class="print-btn button ">Print Details</button></a>
+
+        </div>
     </div>
   </section>
 

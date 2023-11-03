@@ -1,0 +1,11 @@
+@page
+{
+    size:21cm x 29.7cm;
+    margin:0;
+}
+
+#print-btn
+{
+    display:none;
+visibility: none;
+}
